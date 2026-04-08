@@ -44,6 +44,8 @@ export default function Navbar({ onSearch }) {
             </button>
           </form>
 
+          <Link to="/crop-scanner" className="...">🔬 Scan Crop</Link>
+
           <div className="flex items-center gap-1 ml-auto shrink-0">
             <LanguageSwitcher />
             <Link to="/cart"

@@ -13,6 +13,7 @@ const productRoutes = require('./src/routes/products')
 const cartRoutes    = require('./src/routes/cart')
 const orderRoutes   = require('./src/routes/orders')
 const uploadRoutes  = require('./src/routes/upload')
+const cropScanRoutes = require('./src/routes/cropScan')
 
 const app  = express()
 const PORT = process.env.PORT || 5000
@@ -38,6 +39,7 @@ app.use('/api/products', productRoutes)
 app.use('/api/cart',     cartRoutes)
 app.use('/api/orders',   orderRoutes)
 app.use('/api/upload',   uploadRoutes)
+app.use('/api/crop-scan', cropScanRoutes)
 
 // ── Health check ─────────────────────────────────────────────
 app.get('/api/health', (_req, res) => {

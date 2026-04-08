@@ -9,6 +9,7 @@ import Home          from './pages/Home'
 import Login         from './pages/Login'
 import Register      from './pages/Register'
 import ProductDetail from './pages/ProductDetail'
+import CropScanner from './pages/CropScanner'
 
 // Auth-required
 import Cart   from './pages/Cart'
@@ -38,6 +39,8 @@ export default function App() {
       {/* ── Authenticated users ─────────────────────────────── */}
       <Route path="/cart"   element={<ProtectedRoute><Cart /></ProtectedRoute>} />
       <Route path="/orders" element={<ProtectedRoute><Orders /></ProtectedRoute>} />
+
+      <Route path="/crop-scanner" element={<ProtectedRoute><CropScanner /></ProtectedRoute>} />
 
       {/* ── Farmer portal (role = 'farmer') ─────────────────── */}
       <Route path="/farmer" element={
